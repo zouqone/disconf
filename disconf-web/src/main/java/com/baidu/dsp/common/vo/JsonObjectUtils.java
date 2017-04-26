@@ -44,9 +44,10 @@ public class JsonObjectUtils {
      */
     public static <T> JsonObjectBase buildObjectSuccess(String key, T value) {
 
-        JsonObject json = new JsonObject();
+    	JsonObjectBase json = new JsonObjectBase();
         json.addData(key, value);
 
+        
         LOG.info(json.toString());
 
         return json;

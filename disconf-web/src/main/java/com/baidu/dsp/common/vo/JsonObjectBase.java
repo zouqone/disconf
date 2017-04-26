@@ -35,6 +35,8 @@ public class JsonObjectBase implements Serializable {
 
     protected String success = "true";
 
+    private Map<String, Object> result = new HashMap<String, Object>();
+    
     public String getSuccess() {
         return success;
     }
@@ -59,5 +61,20 @@ public class JsonObjectBase implements Serializable {
     public String toString() {
         return "JsonObjectBase [message=" + message + ", sessionId=" + sessionId + ", success=" + success + "]";
     }
+
+	public void addData(String key, Object value) {
+		result.put(key, value);
+		
+	}
+
+	public Object getResult() {
+		return result;
+	}
+
+	public void setResult(Map<String, Object> result) {
+		this.result = result;
+	}
+	
+	
 
 }
